@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSE 442 Web Publishing Example</title>
+    <!-- For using vega-lite -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite-api@5.0.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-tooltip"></script>
+    <!-- For using d3 -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+</head>
+<body>
+    <!-- Vega-Lite script demo -->
+    <section id = "vegaDemo">
+        <h3>Embed a Vega-Lite Visualization:</h3>
+        <div id="view"></div>
+      </section>
+    <!-- D3 script demo -->
+    <section id = "d3Demo">
+        <h3>Embed a D3 Visualization:</h3>
+        <div id="d3-demo"></div>
+    </section>
+    <!-- Observable embed demo -->
+    <section id = "vegaDemo">
+        <h3>Embed a visualization from Observable:</h3>
+        <div id="observablehq-embed-361fbf1c"></div>
+        <script type="module">
+            import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+            import define from "https://api.observablehq.com/d/feefe37e62f2badb.js?v=3";
+            new Runtime().module(define, name => {
+            if (name === "embed") return new Inspector(document.querySelector("#observablehq-embed-361fbf1c"));
+            });
+        </script>
+    </section>
+    <section id = "TableauDemo">
+        <h3>Embed a visualization from Tableau:</h3>
+        <div class='tableauPlaceholder' id='viz1643679313816' style='position: relative'>
+            <noscript>
+                <a href='#'>
+                    <img alt='Tableau Example ' 
+                    src='CT&#47;CTBGTWRWW&#47;1_rss.png' 
+                    style='border: none' />
+                </a>
+            </noscript>
+            <object class='tableauViz'  style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                <param name='embed_code_version' value='3' />
+                <param name='path' value='shared&#47;CTBGTWRWW' />
+                <param name='toolbar' value='yes' />
+                <param name='static_image' value='CT&#47;CTBGTWRWW&#47;1.png' />
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+                <param name='language' value='en-US' />
+                <param name='filter' value='publish=yes' />
+            </object>
+        </div>
+        <script type='text/javascript'>
+            var divElement = document.getElementById('viz1643679313816');
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            vizElement.style.width='70%';
+            vizElement.style.height=(divElement.offsetWidth*0.25)+'px';
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+    </section>
+
+    <script src="vegaDemo.js"></script>
+    <script src="d3Demo.js"></script>
+</body>
+</html>
