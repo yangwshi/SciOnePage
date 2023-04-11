@@ -52,3 +52,13 @@ def SKPM_plot(filePath = '', fileName='', scale = 4, cmap='magma', figName='SKPM
     plt.tight_layout()
     # save figure
     plt.savefig(folder + figName, bbox_inches='tight', dpi=300)
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
